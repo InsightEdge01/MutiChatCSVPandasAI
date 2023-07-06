@@ -1,0 +1,85 @@
+2023-07-06 16:39:10 [INFO] Question: what is the highest brand and the year with the highest price?
+
+2023-07-06 16:39:10 [INFO] Running PandasAI with openai LLM...
+2023-07-06 16:39:10 [INFO] Prompt ID: 2be8c545-89aa-4149-85b6-915822e44459
+2023-07-06 16:39:12 [INFO] 
+                        Code generated:
+                        ```
+                        highest_price = df['price'].max()
+highest_price_row = df[df['price'] == highest_price]
+highest_brand = highest_price_row['model'].values[0]
+highest_year = highest_price_row['year'].values[0]
+
+highest_brand, highest_year
+                        ```
+                    
+2023-07-06 16:39:12 [INFO] 
+Code running:
+```
+highest_price = df['price'].max()
+highest_price_row = df[df['price'] == highest_price]
+highest_brand = highest_price_row['model'].values[0]
+highest_year = highest_price_row['year'].values[0]
+highest_brand, highest_year
+```
+2023-07-06 16:39:12 [INFO] Answer:  Focus 2018
+2023-07-06 16:39:13 [INFO] Conversational answer: The highest brand with the highest price is the Focus from 2018.
+2023-07-06 16:39:13 [INFO] Executed in: 2.852384328842163s
+2023-07-06 16:40:52 [INFO] Question: which model and year has the lowest price 
+2023-07-06 16:40:52 [INFO] Running PandasAI with openai LLM...
+2023-07-06 16:40:52 [INFO] Prompt ID: 5e139db8-c18d-48ab-9d3f-5306dee1362a
+2023-07-06 16:40:53 [INFO] 
+                        Code generated:
+                        ```
+                        lowest_price = df['Price'].min()
+lowest_price_row = df[df['Price'] == lowest_price]
+model = lowest_price_row['Model'].values[0]
+year = lowest_price_row['Year'].values[0]
+
+model, year
+                        ```
+                    
+2023-07-06 16:40:53 [INFO] 
+Code running:
+```
+lowest_price = df['Price'].min()
+lowest_price_row = df[df['Price'] == lowest_price]
+model = lowest_price_row['Model'].values[0]
+year = lowest_price_row['Year'].values[0]
+model, year
+```
+2023-07-06 16:40:53 [INFO] Answer: 80 1980
+2023-07-06 16:40:55 [INFO] Conversational answer: The model and year with the lowest price is the 1980 model, priced at 80.
+2023-07-06 16:40:55 [INFO] Executed in: 2.753756523132324s
+2023-07-06 17:01:26 [INFO] Question: What is the model with the highest price?
+2023-07-06 17:01:26 [INFO] Running PandasAI with openai LLM...
+2023-07-06 17:01:26 [INFO] Prompt ID: 4bb772a2-d0c0-4470-8186-8be273dbfd25
+2023-07-06 17:01:27 [INFO] 
+                        Code generated:
+                        ```
+                        highest_price_model = df.loc[df['price'].idxmax(), 'model']
+highest_price_model
+                        ```
+                    
+2023-07-06 17:01:27 [INFO] 
+Code running:
+```
+highest_price_model = df.loc[df['price'].idxmax(), 'model']
+highest_price_model
+```
+2023-07-06 17:01:27 [INFO] Answer:  Focus
+2023-07-06 17:01:28 [INFO] Conversational answer: The model with the highest price is the Focus.
+2023-07-06 17:01:28 [INFO] Executed in: 1.8428676128387451s
+2023-07-06 17:01:50 [INFO] Question: What is the model with the highest price?
+2023-07-06 17:01:50 [INFO] Running PandasAI with openai LLM...
+2023-07-06 17:01:50 [INFO] Prompt ID: e0e844c8-2244-4793-8611-17d02f80c579
+2023-07-06 17:01:50 [INFO] Using cached response
+2023-07-06 17:01:50 [INFO] 
+Code running:
+```
+highest_price_model = df.loc[df['price'].idxmax(), 'model']
+highest_price_model
+```
+2023-07-06 17:01:50 [INFO] Answer:  Focus
+2023-07-06 17:01:51 [INFO] Conversational answer: The model with the highest price is the Focus.
+2023-07-06 17:01:51 [INFO] Executed in: 0.7106235027313232s
