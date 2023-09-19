@@ -1,3 +1,4 @@
 streamlit
 pandasai
 python-dotenv
+bs4
